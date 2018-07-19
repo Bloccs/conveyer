@@ -14,6 +14,8 @@
 ```
 ## Key Concepts 
 
+### Flow Based Programming 
+
 ### Blocks
 
 Each conveyer pipeline is formed of multiple individual components called Blocks. Blocks are encapsulations of independent behaivour, blocks expect a single struct as input, and return a single struct as output; the struct follows a globably agreed specification. 
