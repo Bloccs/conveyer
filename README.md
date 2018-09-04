@@ -1,11 +1,26 @@
-# Conveyer
-#### A Library for creating Flow-based Pipelines
+# Conveyer - A Library for creating Flow-based Pipelines
+====================================
 
-## Contents
+## CONTENTS
+- [Description](#description)
+- [System Requirements](#system-requirements)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Configuration](#configuration)
+- [Key Concepts](#key-concepts)
+- [License](#License)
 
-## Installation
+## DESCRIPTION
+
+## SYSTEM REQUIREMENTS
+
+## INSTALLATION
+
+## USAGE
+
+## CONFIGURATION
+
+## KEY CONCEPTS
 
 ```elixir
 @deps [
@@ -39,7 +54,7 @@ All blocks will return one of the following tuple types:
 {:error, any}
 ```
 
-## License
+## LICENSE
 
 > TODO: Add license
 
