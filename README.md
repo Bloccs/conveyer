@@ -29,16 +29,7 @@ The package can be installed by adding `conveyer` to your list of dependencies i
 ```
 ## USAGE
 
-**Example:**
-```elixir
-defmodule ExamplePipeline do 
-  use Conveyer.Pipeline
-  
-  phase :add_one
-  phase :multiply_by_two
-  phase :minus_three
-end
-```
+
 
 ## CONFIGURATION
 
@@ -62,12 +53,22 @@ Function blocks will return one of the following tuples:
 
 
 ### Pipeline
+One of the main responsibilities for this pipeline is defining pipeline modules. A pipeline module defines 
 
+**Example:**
+```elixir
+defmodule ExamplePipeline do 
+  use Conveyer.Pipeline
+  
+  phase :add_one
+  phase :multiply_by_two
+  phase :minus_three
+end
+```
 
 ### Blocks
 
 Each conveyer pipeline is formed of multiple individual components called blocks. Blocks are encapsulations of independent behaviour, blocks expect a single struct as input, and return a single struct as output; the struct follows a globally agreed specification. 
-
 
 ### Types
 
@@ -86,6 +87,7 @@ There are multiple blocks types designed to serve different behaviours:
 ```
 
 #### Check 
+This block defines a type of validation or check. Will return `{:ok, payload}` if successful or `{:error, message}` on failure. 
 
 **Example:**
 ```elixir
@@ -105,6 +107,12 @@ There are multiple blocks types designed to serve different behaviours:
 ```elixir
 
 ```
+
+### Options
+
+The behaviour of each block can be configured with any of the available options:
+
+> TODO: Define the list of options  
 
 ## LICENSE
 
