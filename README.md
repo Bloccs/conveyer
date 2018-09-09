@@ -2,6 +2,7 @@
 
 [![pipeline status](https://gitlab.com/bloccsio/conveyer/badges/master/pipeline.svg)](https://gitlab.com/bloccsio/conveyer/commits/master)
 [![coverage report](https://gitlab.com/bloccsio/conveyer/badges/master/coverage.svg)](https://gitlab.com/bloccsio/conveyer/commits/master)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://gitlab.com/bloccsio/conveyer/blob/master/LICENSE)
 
 ## CONTENTS
 - [Description](#description)
