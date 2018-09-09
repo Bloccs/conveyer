@@ -9,6 +9,7 @@ defmodule Conveyer.Mixfile do
     # { :ex_doc,  "1.2.3", only: [ :dev, :test ] },
     # { :my_app:  path: "../my_app" },
     {:ex_doc, "~> 0.19", only: :dev, runtime: false},
+    {:ex_unit_notifier, "~> 0.1", only: :test},
     {:mix_test_watch, "~> 0.8", only: :dev, runtime: false},
     {:credo, "~> 0.10.0", only: [:dev, :test], runtime: false}
   ]
