@@ -1,5 +1,8 @@
 # Conveyer - A Library for creating Flow-based Pipelines
 
+[![pipeline status](https://gitlab.com/bloccsio/conveyer/badges/master/pipeline.svg)](https://gitlab.com/bloccsio/conveyer/commits/master)
+[![coverage report](https://gitlab.com/bloccsio/conveyer/badges/master/coverage.svg)](https://gitlab.com/bloccsio/conveyer/commits/master)
+
 ## CONTENTS
 - [Description](#description)
 - [System Requirements](#system-requirements)
@@ -7,7 +10,7 @@
 - [Usage](#usage)
 - [Configuration](#configuration)
 - [Key Concepts](#key-concepts)
-- [Inspiration](#inspiration)
+- [Acknowledgments](#acknowledgments)
 - [License](#License)
 
 ## DESCRIPTION
@@ -64,9 +67,9 @@ error:
 
 ## LICENSE
 
-> TODO: Add license
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
 
-## INSPIRATION
+## ACKNOWLEDGEMENTS
 
 **Conveyer** takes inspiration and ideas from the following projects:
 
