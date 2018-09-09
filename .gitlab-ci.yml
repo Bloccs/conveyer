@@ -21,5 +21,6 @@ style_format:
 test:
   stage: test
   script:
-  - mix test
+    - mix test
+    - mix coveralls
 
