@@ -1,0 +1,25 @@
+image: elixir:latest
+
+variables:
+  MIX_ENV: "test"
+
+stages:
+  - style_format
+  - test
+
+before_script:
+- apt-get update && apt-get -y install postgresql-client
+- mix local.hex --force
+- mix deps.get --only test
+
+style_format:
+  stage: style_format
+  script:
+    - mix format --check-formatted
+    - mix credo
+
+test:
+  stage: test
+  script:
+  - mix test
+
