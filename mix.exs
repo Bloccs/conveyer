@@ -36,6 +36,13 @@ defmodule Conveyer.Mixfile do
         "coveralls.detail": :test,
         "coveralls.post": :test,
         "coveralls.html": :test
+      ],
+
+      # Docs
+      name: "Conveyer",
+      source_url: "https://gitlab.com/bloccsio/conveyer",
+      docs: [
+        main: "Conveyer"
       ]
     ]
   end
