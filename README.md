@@ -29,6 +29,17 @@ The package can be installed by adding `conveyer` to your list of dependencies i
 ```
 ## USAGE
 
+**Example:**
+```elixir
+defmodule ExamplePipeline do 
+  use Conveyer.Pipeline
+  
+  phase :add_one
+  phase :multiply_by_two
+  phase :minus_three
+end
+```
+
 ## CONFIGURATION
 
 ## KEY CONCEPTS
@@ -38,33 +49,62 @@ Conveyer is building on top of the following key concepts:
 
 > Flow-based programming (FBP) is a programming paradigm that defines applications as networks of "black box" processes, which exchange data across predefined connections by message passing, where the connections are specified externally to the processes.
 
-From this idea Conveyer derives the idea of blocks, in the conveyer context blocks are pure functions that are executed as individual processes or individual process pools.
+From this idea **Conveyer derives the idea of blocks**, in the conveyer context blocks are pure functions that are executed as individual processes or individual process pools.
 
 Function blocks will return one of the following tuples: 
 
-- `{:ok, payload}`: Happy path response, the payload re
-- `{:error, error}`: 
+- `{:ok, payload}`: Happy path response, the payload represents a known struct.
+- `{:error, error_message}`: A failure on the execution of the pipeline handed to the error pipe.
 
 
 ### Railways Oriented Programming (ROP)
 > Railways Oriented Programming (ROP) is a functional approach to error handling on which the out of a function will changing on error, aka straying from the Happy path
 
 
+### Pipeline
+
 
 ### Blocks
 
-Each conveyer pipeline is formed of multiple individual components called blocks. Blocks are encapsulations of independent behaivour, blocks expect a single struct as input, and return a single struct as output; the struct follows a globably agreed specification. 
+Each conveyer pipeline is formed of multiple individual components called blocks. Blocks are encapsulations of independent behaviour, blocks expect a single struct as input, and return a single struct as output; the struct follows a globally agreed specification. 
 
 
 ### Types
 
-There are multiple blocks types designed to serve different behaivours:
+There are multiple blocks types designed to serve different behaviours:
 
+- phase
+- check 
+- joint
+- error
 
-phase:
-check: 
-joint:
-error:
+#### Phase 
+
+**Example:**
+```elixir
+
+```
+
+#### Check 
+
+**Example:**
+```elixir
+
+```
+
+#### Joint 
+
+**Example:**
+```elixir
+
+```
+
+#### Error 
+
+**Example:**
+```elixir
+
+```
 
 ## LICENSE
 
