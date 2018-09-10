@@ -19,6 +19,7 @@
 Conveyer is a library designed to build data pipelines in a clean and modular way by using a mix of Flow-base Programming (FBP), Railway Oriented Programming (ROP), and Elixir GenStage. 
 
 ## SYSTEM REQUIREMENTS
+> TODO: Add System requirements for local running and compilation 
 
 ## INSTALLATION
 The package can be installed by adding `conveyer` to your list of dependencies in `mix.exs`:
@@ -28,10 +29,10 @@ The package can be installed by adding `conveyer` to your list of dependencies i
 ]
 ```
 ## USAGE
-
-
+> TODO: Add usage documentation 
 
 ## CONFIGURATION
+> TODO: Add configuration options documentation
 
 ## KEY CONCEPTS
 Conveyer is building on top of the following key concepts:
@@ -83,7 +84,11 @@ There are multiple blocks types designed to serve different behaviours:
 
 **Example:**
 ```elixir
-
+defmodule ExamplePipeline do 
+  use Conveyer.Pipeline
+  
+  phase :parse_json
+end
 ```
 
 #### Check 
@@ -91,21 +96,36 @@ This block defines a type of validation or check. Will return `{:ok, payload}` i
 
 **Example:**
 ```elixir
-
+defmodule ExamplePipeline do 
+  use Conveyer.Pipeline
+  
+  phase :validate_headers
+end
 ```
 
 #### Joint 
 
 **Example:**
 ```elixir
-
+defmodule ExamExamplePipeline do 
+  use Conveyer.Pipeline
+  
+  phase :add_one
+  phase :multiply_by_two
+  phase :minus_three
+  joint AnotherModule.AnotherPipeline
+end
 ```
 
 #### Error 
 
 **Example:**
 ```elixir
-
+defmodule ExamplePipeline do 
+  use Conveyer.Pipeline
+  
+  error :handle_error
+end
 ```
 
 ### Options
