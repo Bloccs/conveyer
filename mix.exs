@@ -16,7 +16,11 @@ defmodule Conveyer.MixProject do
     {:credo, "~> 0.10.0", only: [:dev, :test], runtime: false}
   ]
 
-  @aliases []
+  @aliases [
+    release: ["git_ops.release", "cmd git push --follow-tags"],
+    "release.test": ["git_ops.release --dry-run"],
+    review: ["format", "credo"]
+  ]
 
   # ------------------------------------------------------------
 
