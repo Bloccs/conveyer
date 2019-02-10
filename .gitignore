@@ -27,3 +27,6 @@ config/dev.exs
 # Ignore Intellij files
 .idea/
 conveyer.iml
+
+# Ignore tmux files
+tmux-*

@@ -1,4 +1,4 @@
-defmodule Conveyer.Mixfile do
+defmodule Conveyer.MixProject do
   use Mix.Project
 
   @name :conveyer
@@ -11,6 +11,7 @@ defmodule Conveyer.Mixfile do
     {:ex_doc, "~> 0.19", only: :dev, runtime: false},
     {:excoveralls, "~> 0.10", only: :test},
     {:ex_unit_notifier, "~> 0.1", only: :test},
+    {:git_ops, "~> 0.6.0"},
     {:mix_test_watch, "~> 0.8", only: :dev, runtime: false},
     {:credo, "~> 0.10.0", only: [:dev, :test], runtime: false}
   ]
@@ -29,7 +30,7 @@ defmodule Conveyer.Mixfile do
       deps: @deps,
       test_coverage: [tool: ExCoveralls],
       aliases: @aliases,
-      elixirc_paths: ["lib"],
+      elixirc_paths: elixirc_paths(Mix.env),
       build_embedded: in_production,
       preferred_cli_env: [
         coveralls: :test,
@@ -46,4 +47,10 @@ defmodule Conveyer.Mixfile do
       ]
     ]
   end
+
+
+  # Specifies which paths to compile per environment.
+  defp elixirc_paths(:test), do: ["lib", "test/support"]
+  defp elixirc_paths(_), do: ["lib"]
+
 end

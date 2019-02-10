@@ -81,6 +81,7 @@ There are multiple blocks types designed to serve different behaviours:
 - error
 
 #### Phase 
+**Description:** 
 
 **Example:**
 ```elixir
@@ -92,7 +93,7 @@ end
 ```
 
 #### Check 
-This block defines a type of validation or check. Will return `{:ok, payload}` if successful or `{:error, message}` on failure. 
+**Description:** This block defines a type of validation or check. Will return `{:ok, payload}` if successful or `{:error, message}` on failure. 
 
 **Example:**
 ```elixir
@@ -104,6 +105,7 @@ end
 ```
 
 #### Joint 
+**Description:**
 
 **Example:**
 ```elixir
@@ -118,6 +120,7 @@ end
 ```
 
 #### Error 
+**Description:**
 
 **Example:**
 ```elixir
