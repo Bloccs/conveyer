@@ -30,7 +30,7 @@ defmodule Conveyer.MixProject do
       deps: @deps,
       test_coverage: [tool: ExCoveralls],
       aliases: @aliases,
-      elixirc_paths: elixirc_paths(Mix.env),
+      elixirc_paths: elixirc_paths(Mix.env()),
       build_embedded: in_production,
       preferred_cli_env: [
         coveralls: :test,
@@ -48,9 +48,7 @@ defmodule Conveyer.MixProject do
     ]
   end
 
-
   # Specifies which paths to compile per environment.
   defp elixirc_paths(:test), do: ["lib", "test/support"]
   defp elixirc_paths(_), do: ["lib"]
-
 end
