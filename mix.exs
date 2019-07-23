@@ -5,9 +5,6 @@ defmodule Conveyer.MixProject do
   @version "0.1.0"
 
   @deps [
-    # { :earmark, ">0.1.5" },
-    # { :ex_doc,  "1.2.3", only: [ :dev, :test ] },
-    # { :my_app:  path: "../my_app" },
     {:ex_doc, "~> 0.19", only: :dev, runtime: false},
     {:excoveralls, "~> 0.10", only: :test},
     {:ex_unit_notifier, "~> 0.1", only: :test},
